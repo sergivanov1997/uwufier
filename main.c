@@ -19,18 +19,24 @@ int main(void) {
             if (buf[i] == 'r') {
                 buf[i] = 'w';
             } else if (buf[i] == ' ') {
-                if (i % 7 == 0) {
+                if (i % 14 == 0) {
                     memmove(&buf[i+5], &buf[i+1], sizeof(buf)/2 - i);
-                    const char uwu[] = " UwU ";
+                    const char uwu[] = " uwu ";
                     memcpy(&buf[i], &uwu, 5);
                     n += 5;
                     i += 5;
-                } else if (i % 15 == 0) {
+                } else if (i % 19 == 0) {
                     memmove(&buf[i+5], &buf[i+1], sizeof(buf)/2 - i);
-                    const char uwu[] = " OwO ";
+                    const char uwu[] = " owo ";
                     memcpy(&buf[i], &uwu, 5);
                     n += 5;
                     i += 5;
+                } else if (i % 23 == 0) {
+                    memmove(&buf[i+6], &buf[i+1], sizeof(buf)/2 - i);
+                    const char uwu[] = " hehe ";
+                    memcpy(&buf[i], &uwu, 6);
+                    n += 6;
+                    i += 6;
                 }
             }
         }
